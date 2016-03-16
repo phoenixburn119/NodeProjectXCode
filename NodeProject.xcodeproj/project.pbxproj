@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F5C6AC1B1C99DBBE00DAC875 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5C6AC1A1C99DBBE00DAC875 /* main.cpp */; };
+		F5C6AC321C99DD2B00DAC875 /* NodeController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5C6AC241C99DD2B00DAC875 /* NodeController.cpp */; };
+		F5C6AC331C99DD2B00DAC875 /* NodeRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5C6AC261C99DD2B00DAC875 /* NodeRunner.cpp */; };
+		F5C6AC341C99DD2B00DAC875 /* ArrayNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5C6AC281C99DD2B00DAC875 /* ArrayNode.cpp */; };
+		F5C6AC351C99DD2B00DAC875 /* CTECArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5C6AC2A1C99DD2B00DAC875 /* CTECArray.cpp */; };
+		F5C6AC361C99DD2B00DAC875 /* CTECList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5C6AC2C1C99DD2B00DAC875 /* CTECList.cpp */; };
+		F5C6AC371C99DD2B00DAC875 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5C6AC2E1C99DD2B00DAC875 /* Node.cpp */; };
+		F5C6AC381C99DD2B00DAC875 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5C6AC301C99DD2B00DAC875 /* Timer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +30,19 @@
 
 /* Begin PBXFileReference section */
 		F5C6AC171C99DBBE00DAC875 /* NodeProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NodeProject; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5C6AC1A1C99DBBE00DAC875 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F5C6AC241C99DD2B00DAC875 /* NodeController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NodeController.cpp; sourceTree = "<group>"; };
+		F5C6AC251C99DD2B00DAC875 /* NodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeController.h; sourceTree = "<group>"; };
+		F5C6AC261C99DD2B00DAC875 /* NodeRunner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NodeRunner.cpp; sourceTree = "<group>"; };
+		F5C6AC281C99DD2B00DAC875 /* ArrayNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayNode.cpp; sourceTree = "<group>"; };
+		F5C6AC291C99DD2B00DAC875 /* ArrayNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayNode.h; sourceTree = "<group>"; };
+		F5C6AC2A1C99DD2B00DAC875 /* CTECArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECArray.cpp; sourceTree = "<group>"; };
+		F5C6AC2B1C99DD2B00DAC875 /* CTECArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTECArray.h; sourceTree = "<group>"; };
+		F5C6AC2C1C99DD2B00DAC875 /* CTECList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECList.cpp; sourceTree = "<group>"; };
+		F5C6AC2D1C99DD2B00DAC875 /* CTECList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTECList.h; sourceTree = "<group>"; };
+		F5C6AC2E1C99DD2B00DAC875 /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		F5C6AC2F1C99DD2B00DAC875 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		F5C6AC301C99DD2B00DAC875 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
+		F5C6AC311C99DD2B00DAC875 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +59,8 @@
 		F5C6AC0E1C99DBBE00DAC875 = {
 			isa = PBXGroup;
 			children = (
-				F5C6AC191C99DBBE00DAC875 /* NodeProject */,
+				F5C6AC231C99DD2B00DAC875 /* Controller */,
+				F5C6AC271C99DD2B00DAC875 /* Model */,
 				F5C6AC181C99DBBE00DAC875 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +73,31 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F5C6AC191C99DBBE00DAC875 /* NodeProject */ = {
+		F5C6AC231C99DD2B00DAC875 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F5C6AC1A1C99DBBE00DAC875 /* main.cpp */,
+				F5C6AC241C99DD2B00DAC875 /* NodeController.cpp */,
+				F5C6AC251C99DD2B00DAC875 /* NodeController.h */,
+				F5C6AC261C99DD2B00DAC875 /* NodeRunner.cpp */,
 			);
-			path = NodeProject;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F5C6AC271C99DD2B00DAC875 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5C6AC281C99DD2B00DAC875 /* ArrayNode.cpp */,
+				F5C6AC291C99DD2B00DAC875 /* ArrayNode.h */,
+				F5C6AC2A1C99DD2B00DAC875 /* CTECArray.cpp */,
+				F5C6AC2B1C99DD2B00DAC875 /* CTECArray.h */,
+				F5C6AC2C1C99DD2B00DAC875 /* CTECList.cpp */,
+				F5C6AC2D1C99DD2B00DAC875 /* CTECList.h */,
+				F5C6AC2E1C99DD2B00DAC875 /* Node.cpp */,
+				F5C6AC2F1C99DD2B00DAC875 /* Node.h */,
+				F5C6AC301C99DD2B00DAC875 /* Timer.cpp */,
+				F5C6AC311C99DD2B00DAC875 /* Timer.h */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +156,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5C6AC1B1C99DBBE00DAC875 /* main.cpp in Sources */,
+				F5C6AC351C99DD2B00DAC875 /* CTECArray.cpp in Sources */,
+				F5C6AC321C99DD2B00DAC875 /* NodeController.cpp in Sources */,
+				F5C6AC361C99DD2B00DAC875 /* CTECList.cpp in Sources */,
+				F5C6AC371C99DD2B00DAC875 /* Node.cpp in Sources */,
+				F5C6AC331C99DD2B00DAC875 /* NodeRunner.cpp in Sources */,
+				F5C6AC381C99DD2B00DAC875 /* Timer.cpp in Sources */,
+				F5C6AC341C99DD2B00DAC875 /* ArrayNode.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
