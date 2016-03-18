@@ -32,7 +32,6 @@ CTECArray<Type> :: CTECArray(int size)
 			this->head = &firstNode;
 		}
 	}
-    return current->getValue();
 }
 
 
@@ -172,5 +171,6 @@ Type CTECArray<Type> :: get(int position)
 				return current->getValue();
 			}
 		}
+        return current->getValue();
 	}
 }

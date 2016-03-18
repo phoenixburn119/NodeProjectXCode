@@ -8,6 +8,7 @@
 #include "CTECList.h"
 #include "ArrayNode.cpp"
 #include <iostream>
+#include <assert.h>
 using namespace std;
 
 template<class Type>
@@ -66,7 +67,7 @@ Type CTECList<Type> :: removeFromIndex(int index)
 	assert(size > 0);
 	assert(index >= 0);
 	assert(index < size);
-	assert(size > 0 && index >= && index < size);
+	assert(size > 0 && index < size);
 }
 
 template<class Type>
@@ -129,4 +130,26 @@ void CTECList<Type> :: calculateSize()
 		}
 		size = count;
 	}
+}
+
+template <class Type>
+    int CTECList<Type> :: indexOf(Type searchValue)
+    {
+        assert(this->size >0);
+        
+        int index;
+        
+        ArrayNode<Type> * searchPointer;
+        
+        for(searchPointer = head; searchPointer != nullptr; searchPointer = searchPointer->getNext())
+        {
+            if(searchValue == searchPointer->getValue())
+            {
+                return index;
+            }
+            index++;
+        }
+        index = -1;
+        return index;
+    }
 }
