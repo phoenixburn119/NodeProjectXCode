@@ -33,6 +33,7 @@ public:
 	Type getFromIndex(int index);
 	Type removeFromFront();
     Type removeFromEnd();
+    Type addAtIndex();
 	Type removeFromIndex(int index);
 	Type set(int index, const Type& value);
     int indexOf(Type searchValue);

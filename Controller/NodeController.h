@@ -20,6 +20,7 @@ class NodeController {
 private:
 	CTECArray<int> * notHipsterInts;
 	Timer arrayTimer;
+    void sortData();
 public:
 	NodeController();
 	virtual ~NodeController();
