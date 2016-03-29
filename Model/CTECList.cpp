@@ -163,8 +163,6 @@ void CTECList<Type> :: swap(int indexOne, int indexTwo)
     
 }
 
-
-
 template <class Type>
 void CTECList<Type> :: selectionSort()
 {

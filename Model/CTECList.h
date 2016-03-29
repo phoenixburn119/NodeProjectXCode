@@ -19,7 +19,6 @@ private:
 	ArrayNode<Type> * end;
 	void calculateSize();
     void swap(int indexOne, int indexTwo);
-    void selectionSort();
 public:
 	CTECList();
 	virtual ~CTECList();
@@ -27,6 +26,7 @@ public:
 	void addToFront(const Type& value);
 	void addToEnd(const Type& value);
 	void addAtIndex(int index, const Type& value);
+    void selectionSort();
 	//The end of my life
 	Type getFront();
 	Type getEnd();

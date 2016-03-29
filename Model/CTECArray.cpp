@@ -175,11 +175,32 @@ Type CTECArray<Type> :: get(int position)
 	}
 }
 
-template<class Type>
-void CTECList<Type> :: swap(int indexOne, int indexTwo)
+template <class Type>
+void CTECArray<Type> :: swap(int indexOne, int indexTwo)
 {
     assert(indexOne < size && indexTwo < size);
-    Type temp = getFromIndex(indexOne);
-    set(indexOne, getFromIndex(indexTwo));
+    Type temp = get(indexOne);
+    set(indexOne, get(indexTwo));
     set(indexTwo, temp);
+}
+
+template <class Type>
+void CTECArray<Type> :: selectionSort()
+{
+    int innerLoop, outerLoop;
+    for(outerLoop = 0; outerLoop < this->size-1; outerLoop++)
+    {
+        int selectedMinimum = outerLoop;
+        for(innerLoop = outerLoop+1; innerLoop < size; innerLoop++)
+        {
+            if(get(innerLoop) < get(selectedMinimum))
+            {
+                selectedMinimum = innerLoop;
+            }
+        }
+        if(selectedMinimum != outerLoop)
+        {
+            swap(selectedMinimum, outerLoop);
+        }
+    }
 }

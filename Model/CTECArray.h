@@ -22,6 +22,7 @@ public:
 	virtual ~CTECArray();
 	int getSize();
 	void set(int position, Type value);
+    void selectionSort();
 	Type get(int position);
     int indexOf(Type searchValue);
     int nextIndexOf(int startingIndex, Type searchValue);
