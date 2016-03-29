@@ -174,3 +174,12 @@ Type CTECArray<Type> :: get(int position)
         return current->getValue();
 	}
 }
+
+template<class Type>
+void CTECList<Type> :: swap(int indexOne, int indexTwo)
+{
+    assert(indexOne < size && indexTwo < size);
+    Type temp = getFromIndex(indexOne);
+    set(indexOne, getFromIndex(indexTwo));
+    set(indexTwo, temp);
+}

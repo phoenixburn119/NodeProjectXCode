@@ -71,7 +71,7 @@ Type CTECList<Type> :: removeFromIndex(int index)
 }
 
 template<class Type>
-Type CTECList<Type> :: removeFromEnd()
+Type CTECList<Type> :: addAtIndex()
 {
 	/**
 	 * Check size is valid
@@ -151,5 +151,37 @@ template <class Type>
         }
         index = -1;
         return index;
+    }
+
+template<class Type>
+void CTECList<Type> :: swap(int indexOne, int indexTwo)
+{
+    assert(indexOne < size && indexTwo < size);
+    Type temp = getFromIndex(indexOne);
+    set(indexOne, getFromIndex(indexTwo));
+    set(indexTwo, temp);
+    
+}
+
+
+
+template <class Type>
+void CTECList<Type> :: selectionSort()
+{
+    int innerLoop, outerLoop;
+    for(outerLoop = 0; outerLoop < this->size-1; outerLoop++)
+    {
+        int selectedMinimum = outerLoop;
+        for(innerLoop = outerLoop+1; innerLoop < size; innerLoop++)
+        {
+            if(getFromIndex(innerLoop) < getFromIndex(selectedMinimum))
+            {
+                selectedMinimum = innerLoop;
+            }
+        }
+        if(selectedMinimum != outerLoop)
+        {
+            swap(selectedMinimum, outerLoop);
+        }
     }
 }
