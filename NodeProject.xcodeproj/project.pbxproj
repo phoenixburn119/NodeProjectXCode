@@ -14,6 +14,7 @@
 		F5C6AC361C99DD2B00DAC875 /* CTECList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5C6AC2C1C99DD2B00DAC875 /* CTECList.cpp */; };
 		F5C6AC371C99DD2B00DAC875 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5C6AC2E1C99DD2B00DAC875 /* Node.cpp */; };
 		F5C6AC381C99DD2B00DAC875 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5C6AC301C99DD2B00DAC875 /* Timer.cpp */; };
+		F5F284AC1CBC1D4400B45B3E /* TreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5F284AA1CBC1D4400B45B3E /* TreeNode.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,8 @@
 		F5C6AC2F1C99DD2B00DAC875 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		F5C6AC301C99DD2B00DAC875 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		F5C6AC311C99DD2B00DAC875 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		F5F284AA1CBC1D4400B45B3E /* TreeNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeNode.cpp; sourceTree = "<group>"; };
+		F5F284AB1CBC1D4400B45B3E /* TreeNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TreeNode.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				F5C6AC2F1C99DD2B00DAC875 /* Node.h */,
 				F5C6AC301C99DD2B00DAC875 /* Timer.cpp */,
 				F5C6AC311C99DD2B00DAC875 /* Timer.h */,
+				F5F284AA1CBC1D4400B45B3E /* TreeNode.cpp */,
+				F5F284AB1CBC1D4400B45B3E /* TreeNode.hpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 				F5C6AC351C99DD2B00DAC875 /* CTECArray.cpp in Sources */,
 				F5C6AC321C99DD2B00DAC875 /* NodeController.cpp in Sources */,
 				F5C6AC361C99DD2B00DAC875 /* CTECList.cpp in Sources */,
+				F5F284AC1CBC1D4400B45B3E /* TreeNode.cpp in Sources */,
 				F5C6AC371C99DD2B00DAC875 /* Node.cpp in Sources */,
 				F5C6AC331C99DD2B00DAC875 /* NodeRunner.cpp in Sources */,
 				F5C6AC381C99DD2B00DAC875 /* Timer.cpp in Sources */,
@@ -281,6 +287,7 @@
 				F5C6AC201C99DBBE00DAC875 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
