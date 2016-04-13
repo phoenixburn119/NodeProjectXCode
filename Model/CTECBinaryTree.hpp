@@ -31,7 +31,9 @@ namespace CTECData
         int getHeight();
         bool isBalanced();
         TreeNode<Type> * getRoot();
-        
+        void preorderTraversal(TreeNode<Type> * currentTree);
+        void inorderTraversal(TreeNode<Type> * currentTree);
+        void postorderTraversal(TreeNode<Type> * currentTree);
     };
     
 }
