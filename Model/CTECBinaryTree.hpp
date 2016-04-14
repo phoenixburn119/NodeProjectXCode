@@ -20,7 +20,8 @@ namespace CTECData
         TreeNode<Type> * root;
         int height;
         bool balance;
-        bool contains(Type value, CTECBinaryTree<Type> * currentTree);
+        void calculateSize(TreeNode<Type> * currentNode);
+        bool contains(Type value, CTECBinaryTree<Type> * currentTree); //Done
     public:
         CTECBinaryTree();
         ~CTECBinaryTree();
@@ -31,9 +32,9 @@ namespace CTECData
         int getHeight();
         bool isBalanced();
         TreeNode<Type> * getRoot();
-        void preorderTraversal(TreeNode<Type> * currentTree);
-        void inorderTraversal(TreeNode<Type> * currentTree);
-        void postorderTraversal(TreeNode<Type> * currentTree);
+        void preorderTraversal(TreeNode<Type> * currentTree); //Done
+        void inorderTraversal(TreeNode<Type> * currentTree); //Done
+        void postorderTraversal(TreeNode<Type> * currentTree); //Done
     };
     
 }
