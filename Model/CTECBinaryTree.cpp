@@ -7,6 +7,7 @@
 //
 
 #include "CTECBinaryTree.hpp"
+#include <iostream>
 using namespace CTECData;
 using namespace std;
 
@@ -30,7 +31,7 @@ int CTECBinaryTree<Type> :: getSize()
 template <class Type>
 void CTECBinaryTree<Type> :: calculateSize(TreeNode<Type> * currentNode)
 {
-    i(currentNode != nullptr)
+    if(currentNode != nullptr)
     {
         calculateSize(currentNode->getLeftChild());
         calculateSize(currentNode->getRightChild());
@@ -70,24 +71,25 @@ void CTECBinaryTree<Type> :: preorderTraversal(TreeNode<Type> * current)
 }
 
 template <class Type>
-void CTECBinaryTree<Type> :: inorderTraversal(Tree<Type> * currentNode)
+void CTECBinaryTree<Type> :: inorderTraversal(TreeNode<Type> * currentNode)
 {
     if(currentNode != nullptr)
     {
         preorderTraversal(currentNode->getLeftChild());
         cout << currentNode->getValue() << " ";
-        preorderTraversal(currentNOde->getRightChild());
+        preorderTraversal(currentNode->getRightChild());
     }
 }
 
 template <class Type>
-void CTECBinaryTree<Type> :: postorderTraversal(Tree<Type> * currentNode)
+void CTECBinaryTree<Type> :: postorderTraversal(TreeNode<Type> * currentNode)
 {
     if(currentNode != nullptr)
     {
         preorderTraversal(currentNode->getLeftChild());
-        preorderTraversal(currentNOde->getRightChild());
-        cout << currentNode->getValue() << " ";    }
+        preorderTraversal(currentNode->getRightChild());
+        cout << currentNode->getValue() << " ";
+    }
 }
 
 template <class Type>
@@ -142,6 +144,51 @@ bool CTECBinaryTree<Type> :: contains(Type value, CTECBinaryTree<Type> * current
     }
     
     return isInTree;
+}
+
+template <class Type>
+bool CTECBinaryTree<Type> :: insert(const Type& value)
+{
+    if(contains(value))
+    {
+        return false;
+    }
+    else
+    {
+        TreeNode<Type> * currentNode = root;
+        TreeNode<Type> * trailNode;
+        
+        if(root == nullptr)
+        {
+            root = new TreeNode<Type>(value);
+        }
+        else
+        {
+            while (currentNode != nullptr)
+            {
+                trailNode = currentNode;
+                
+                if (currentNode->getValue() < value)
+                {
+                    currentNode = currentNode->getRightChild();
+                }
+                else
+                {
+                    currentNode = currentNode->getLeftChild();
+                }
+            }
+            if(trailNode->getValue() > value)
+            {
+                trailNode->setLeftChild(new TreeNode<Type>(value, trailNode));
+            }
+            else
+            {
+                TreeNode<Type> * insertedNode = new TreeNode<Type>(value,trailNode);
+                trailNode->setRightChild(insertedNode);
+            }
+        }
+    }
+    return true;
 }
 
 
