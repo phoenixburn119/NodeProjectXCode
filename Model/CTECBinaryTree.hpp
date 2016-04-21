@@ -24,11 +24,13 @@ namespace CTECData
         bool contains(Type value, CTECBinaryTree<Type> * currentTree); //Done
         TreeNode<Type> * getRightMostChild(TreeNode<Type> leftSubTree);
         TreeNode<Type> * getLeftMostChild(TreeNode<Type> rightSubTree);
+        
+        void remove(TreeNode<Type> nodeToBeRemoved();
     public:
         CTECBinaryTree();
         ~CTECBinaryTree();
         bool insert(const Type& value); //Done
-        Type remove();
+        void remove();
         bool contains(Type value); //Done
         int getSize();
         int getHeight();
