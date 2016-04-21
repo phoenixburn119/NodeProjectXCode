@@ -22,8 +22,8 @@ namespace CTECData
         bool balanced;
         void calculateSize(TreeNode<Type> * currentNode); //Done
         bool contains(Type value, CTECBinaryTree<Type> * currentTree); //Done
-        TreeNode<Type> * getRightMostChild(CTECBinaryTree<Type> leftSubTree);
-        TreeNode<Type> * getLeftMostChild(CTECBinaryTree<Type> rightSubTree);
+        TreeNode<Type> * getRightMostChild(TreeNode<Type> leftSubTree);
+        TreeNode<Type> * getLeftMostChild(TreeNode<Type> rightSubTree);
     public:
         CTECBinaryTree();
         ~CTECBinaryTree();
