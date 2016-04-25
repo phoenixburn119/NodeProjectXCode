@@ -15,9 +15,15 @@ template <class Type>
 CTECBinaryTree<Type> :: CTECBinaryTree()
 {
     this->root = nullptr;
-    this-size = 0;
-    this-height = 0;
-    this-balanced = true;
+    this->size = 0;
+    this->height = 0;
+    this->balanced = true;
+}
+
+template <class Type>
+CTECBinaryTree<Type> :: CTECBinaryTree()
+{
+    
 }
 
 template <class Type>

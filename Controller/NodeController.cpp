@@ -7,7 +7,7 @@
 
 #include "NodeController.h"
 #include <iostream>
-#include <stdb.h> //Allows access to rand() function for random #
+#include <std.h> //Allows access to rand() function for random #
 
 
 NodeController::NodeController()
@@ -15,7 +15,8 @@ NodeController::NodeController()
 	notHipsterInts = new CTECArray<int>(5);
 }
 
-NodeController::~NodeController() {
+NodeController::~NodeController()
+{
 
 }
 
@@ -42,6 +43,13 @@ void NodeController :: start()
 	arrayTimer.stopTimer();
 	arrayTimer.displayTimerInformation();
 }
+
+void NodeController :: tryTree()
+{
+    CTECBinaryTree<int> firstTree;
+    
+}
+
 
 void NodeController :: sortData()
 {

@@ -21,6 +21,8 @@ private:
 	CTECArray<int> * notHipsterInts;
 	Timer arrayTimer;
     void sortData();
+    
+    void tryTree();
 public:
 	NodeController();
 	virtual ~NodeController();

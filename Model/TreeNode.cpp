@@ -9,8 +9,8 @@
 #include "TreeNode.hpp"
 using namespace CTECData;
 
-template <classType>
-TreeNode<classType> :: TreeNode() : Node<Type>()
+template <class Type>
+TreeNode<class Type> :: TreeNode() : Node<Type>()
 {
     this->leftChild = nullptr;
     this->rigthChild = nullptr;
@@ -34,3 +34,22 @@ TreeNode<Type> :: TreeNode(const Type& value, TreeNode<Type> * Parent) : Node<Ty
     this->rigthChild = nullptr;
     this->parent = parent;
 }
+
+template <class Type>
+void TreeNode<Type> :: setLeftChild(TreeNode<Type> * leftChild)
+{
+    this->leftChild = leftChild;
+}
+
+template <class Type>
+void TreeNode<Type> :: setRightChild(TreeNode<Type> * rightChild)
+{
+    this->rightChild = rightChild;
+}
+
+template <class Type>
+void TreeNode<Type> :: setParent(TreeNode<Type> * parent)
+{
+    this->parent = parent;
+}
+
